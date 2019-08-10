@@ -1,0 +1,12 @@
+node {
+    stage('Checkout SCM') {
+        git 'https://github.com/Vishwanathms/Java-Proj1'
+    }
+    stage('Properties-SCM-Trigger') {
+        properties([pipelineTriggers([upstream('Job1'), githubPush(), pollSCM('H/3 * * * *')])])
+    }
+    stage('Build'){
+        sh 'javac Samplecode.java'
+        sh 'java Simple'
+    }
+}
