@@ -8,6 +8,6 @@ node {
     stage('Build'){
         sh 'javac Samplecode.java'
         sh 'java Simple'
-        sh ls -l
+        sh 'ls -l'
     }
 }
