@@ -1,0 +1,7 @@
+node {
+    stage('shell sricpt') {
+        sh 'ls -l'
+        sh 'sleep 10'
+        sh 'touch test.result'
+    }
+}
