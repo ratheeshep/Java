@@ -11,7 +11,8 @@ pipeline {
                 sh 'javac *.java'
                 sh 'java Simple'
                 sh 'ls -l'
-                sh 'scp *.class root@192.168.1.24/root/projects'
+                sh 'sudo su'
+                sh 'scp *.class root@192.168.1.24:/root/projects'
             }
         }
     }
