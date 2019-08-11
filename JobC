@@ -1,0 +1,7 @@
+node{
+    stage('Shell scripts'){
+        sh 'echo "This is a test file" > test.result'
+        sh 'sleep 10'
+        sh 'cp test.result jobc/'
+    }
+}
